@@ -1,16 +1,25 @@
 from manim import *
+import math
 
-class Test1(Scene):
+mathText1 = ["\int_{-\infty}^{\infty} e^{-x^2} d x",
+             "\int_{-\infty}^{\infty} e^{-x^2} d x = \sqrt{\pi}"]
+
+class TransformAttempt(Scene):
     def construct(self):
-        tex1 = MathTex("\int_{-\infty}^{\infty} x^{-x} d x", font_size = 80).move_to([3,3,0])
-        tex2 = always_redraw(lambda : Tex("Manim", font_size = 80).next_to(tex1, DOWN))
+        tex1 = MathTex(mathText1[0], font_size = 80)
+        tex2 = MathTex(mathText1[1], font_size = 80)
         
-        self.play(FadeIn(tex1, tex2))
-        self.wait()
-        self.play(tex1.animate.move_to([-3,-2,0]))
-        self.wait()
+        self.play(Write(tex1))
+        self.wait(2)
+        self.play(tex1.animate.move_to([0,0,0]))
+        self.play(tex1.animate.move_to([-1.2,0,0]))
+        self.wait(2)
+        self.play(ReplacementTransform(tex1,tex2))
+        self.wait(2)
+        self.play(Circumscribe(tex1))
+        self.play(Unwrite(tex2))
 
-class Test2(Scene):
+class updaters(Scene):
   def construct(self):
     
     k = ValueTracker(0)
@@ -21,14 +30,17 @@ class Test2(Scene):
     self.play(k.animate.set_value(6), rate_func=linear)
     self.wait(1)
     
-class Graphin(Scene):
+class Graphing(Scene):
   def construct(self):
+    
     plane = NumberPlane(
-      x_range=[-4, 4, 1], x_length=7, y_range=[0, 16, 4],y_length=8
-    ).to_edge(DOWN)
+      x_range=[-2*PI, 2*PI, PI/6], x_length=4*PI, y_range=[-2, 2, 1],y_length=4
+    )
 
-    parab = plane.get_graph(lambda x: x ** 2, x_range=[-4, 4], color=GREEN)
-
+    #declare function here
+    parabola = plane.plot(lambda x: math.sin(x), color = BLUE)
+    
+    
     self.play(DrawBorderThenFill(plane))
-    self.play(Create(parab))
+    self.play(Create(parabola, run_time = 3))
     self.wait(3)

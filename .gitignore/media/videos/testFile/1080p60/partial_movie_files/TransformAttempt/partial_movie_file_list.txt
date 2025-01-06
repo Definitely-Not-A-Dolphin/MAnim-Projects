@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/3977891868_445353198_223132457.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_784179552_2405305530.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_2307530622_3171808083.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_258973809_3171808083.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_784179552_2202175524.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_3877250271_4221178442.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_784179552_1696608482.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_3728134589_2930287857.mp4'
+file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/TransformAttempt/2852726489_646620638_1688876926.mp4'
