@@ -38,8 +38,29 @@ class Graphing(Scene):
     )
 
     #declare function here
-    parabola = plane.plot(lambda x: math.sin(x), color = BLUE)
+    function1 = plane.plot(lambda x: math.cos(x), color = BLUE)
+    
+    functionA = plane.plot(lambda x: 1, 
+                           color = RED)
+    functionB = plane.plot(lambda x: 1 - (x**2)/2, 
+                           color = ORANGE)
+    functionC = plane.plot(lambda x: 1 - (x**2)/2 + (x**4)/24, 
+                           color = YELLOW)
+    functionD = plane.plot(lambda x: 1 - (x**2)/2 + (x**4)/24 - (x**6)/720, 
+                           color = GREEN)
+    functionE = plane.plot(lambda x: 1 - (x**2)/2 + (x**4)/24 - (x**6)/720 + (x**8)/40320, 
+                           color = BLUE)
     
     self.play(DrawBorderThenFill(plane))
-    self.play(Create(parabola, run_time = 3))
+    self.play(Create(function1, run_time = 2))
+    self.wait(1)
+    self.play(Create(functionA), run_time = 2)
+    self.wait(1)
+    self.play(Transform(functionA, functionB), run_time = 2)
+    self.wait(1)
+    self.play(Transform(functionA, functionC), run_time = 2)
+    self.wait(1)
+    self.play(Transform(functionA, functionD), run_time = 2)
+    self.wait(1)
+    self.play(Transform(functionA, functionE), run_time = 2)
     self.wait(3)
