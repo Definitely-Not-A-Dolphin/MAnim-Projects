@@ -34,12 +34,11 @@ class Graphing(Scene):
   def construct(self):
     
     plane = NumberPlane(
-      x_range=[-2*PI, 2*PI, PI/6], x_length=4*PI, y_range=[-2, 2, 1],y_length=4
+      x_range = [-2*PI, 2*PI, PI/2], x_length = 4*PI, y_range = [-2, 2, 1], y_length = 4
     )
 
     #declare function here
     parabola = plane.plot(lambda x: math.sin(x), color = BLUE)
-    
     
     self.play(DrawBorderThenFill(plane))
     self.play(Create(parabola, run_time = 3))

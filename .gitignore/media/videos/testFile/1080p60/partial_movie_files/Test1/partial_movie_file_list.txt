@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/3977891868_1563739624_223132457.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_784179552_4271412347.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_3565700925_1379328719.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_228807231_4270155043.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_784179552_3806200002.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_119874782_3152199575.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_784179552_1162364563.mp4'
-file 'file:/home/DNAD/Documents/GitHub/MAnim-Projects/media/videos/testFile/1080p60/partial_movie_files/Test1/2852726489_3564640779_3827952972.mp4'
