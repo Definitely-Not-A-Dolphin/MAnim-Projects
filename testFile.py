@@ -1,23 +1,19 @@
 from manim import *
 import math
 
-mathText1 = ["\int_{-\infty}^{\infty} e^{-x^2} d x",
-             "\int_{-\infty}^{\infty} e^{-x^2} d x = \sqrt{\pi}"]
+mathText1 = [r"\left(-\frac{1}{2}\right)!",
+             r"= \sqrt{\pi}"]
 
 class TransformAttempt(Scene):
     def construct(self):
-        tex1 = MathTex(mathText1[0], font_size = 80)
-        tex2 = MathTex(mathText1[1], font_size = 80)
-        
+        tex1 = MathTex(mathText1[0], font_size = 60)
+        tex2 = MathTex(mathText1[0] + mathText1[1], font_size = 60)
+        tex3 = MathTex(mathText1[1], font_size = 60)
+
         self.play(Write(tex1))
-        self.wait(2)
-        self.play(tex1.animate.move_to([0,0,0]))
-        self.play(tex1.animate.move_to([-1.2,0,0]))
-        self.wait(2)
-        self.play(ReplacementTransform(tex1,tex2))
-        self.wait(2)
-        self.play(Circumscribe(tex1))
-        self.play(Unwrite(tex2))
+        self.wait()
+        self.play(Transform(tex1,tex2,tex3))
+        self.wait(3)
 
 class updaters(Scene):
   def construct(self):
