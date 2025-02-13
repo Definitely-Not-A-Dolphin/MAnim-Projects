@@ -92,4 +92,9 @@ class SceneOne(Scene):
     tex16 = MathTex(r"y^3 + p y + q = 0", font_size = 40)
     self.play(Transform(tex10, tex16))
     self.wait(2)
+
+
+
+
+
     
