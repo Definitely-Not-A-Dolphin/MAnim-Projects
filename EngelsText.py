@@ -237,7 +237,7 @@ class Scene1(Scene):
                  font_size=25).to_edge(DL)
 
     self.play(Write(AgonyIntro))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgonyIntro))
     self.play(Write(Advice1))
 
@@ -261,13 +261,13 @@ class Scene1(Scene):
                   font_size=30).to_edge(UR)
     
     self.play(Write(OphText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText1))
     self.play(Write(HamText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(HamText1))
     self.play(Write(OphText2))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText2))
 
     MoveTo(HamletPer,[-2,0,0],[-8,0,0])
@@ -293,16 +293,16 @@ class Scene1(Scene):
                   font_size=30).to_edge(UL)
 
     self.play(Write(OphText4))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText4))
     self.play(Write(PolText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(PolText1))
     self.play(Write(OphText5))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText5))
     self.play(Write(PolText2))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(PolText2))
 
     self.play(FadeOut(OpheliaPer),FadeOut(PoloniusPer))
@@ -313,7 +313,7 @@ class Scene1(Scene):
                     font_size=30).to_edge(DL)
     self.play(Write(AgonyText3))
 
-    self.wait(3)
+    self.wait(2)
 
 class Scene2(Scene):
   def construct(self):
@@ -362,16 +362,16 @@ class Scene2(Scene):
                   'until I have said so!', font_size=30).to_edge(UL)
     
     self.play(Write(OphText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText1))
     self.play(Write(PolText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(PolText1))
     self.play(Write(OphText2))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText2))
     self.play(Write(PolText2))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(PolText2))
     
     MoveTo(PolPer,[-2,0,0],[-8,0,0])
@@ -383,10 +383,10 @@ class Scene2(Scene):
                   'it would go. Let\'s attempt one final time', font_size=30).to_edge(DL)
     
     self.play(Write(AgoText3))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgoText3))
     
-    self.wait(3)
+    self.wait(2)
 
 class Scene3(Scene):
   def construct(self):
@@ -398,9 +398,7 @@ class Scene3(Scene):
     
     AgonyPer=AuntAgony(False).move_to([6,-2.5,0])
     self.add(AgonyPer)
-    
-    self.wait(3)
-    
+        
     AgoText2=Text('Maybe we should just stop talking \n'
                   'to him, Ophelia..',
                   font_size=30).to_edge(DL)
@@ -430,23 +428,23 @@ class Scene3(Scene):
     
     self.play(Unwrite(AgoText2))
     self.play(Write(OphText1))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText1))
     self.play(Write(AgoText3))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgoText3))
     self.play(Write(OphText2))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(OphText2))
     MoveTo(OphPer,[-2,0,0],[-8,0,0])
     self.play(Write(AgoText4))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgoText4))
     self.play(Write(AgoText5))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgoText5))
     self.play(Write(AgoText6))
-    self.wait(3)
+    self.wait(2)
     self.play(Unwrite(AgoText6))
     MoveTo(AgonyPer,[6.-2.5,0],[8,0,0])
     self.play(FadeOut(OphPer),FadeOut(AgonyPer))
@@ -454,4 +452,4 @@ class Scene3(Scene):
     Outrotext1=Text('This video was made by Derek Verduijn \n', font_size=50)
     self.play(FadeIn(Outrotext1))
     self.play(FadeIn(Text('using the Manim Python Library, edited with KDENLive.', font_size=30).next_to(Outrotext1,DOWN)))
-    self.wait(3)
+    self.wait(2)
