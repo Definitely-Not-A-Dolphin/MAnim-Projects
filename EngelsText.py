@@ -314,3 +314,144 @@ class Scene1(Scene):
     self.play(Write(AgonyText3))
 
     self.wait(3)
+
+class Scene2(Scene):
+  def construct(self):
+    def MoveTo(Mobject,OldPos,NewPos):
+      self.play(Mobject.animate.shift(RIGHT*(NewPos[0]-OldPos[0])))
+      self.play(Mobject.animate.shift(UP*(NewPos[1]-OldPos[1])))
+      
+      return Mobject
+    
+    
+    AgonyPer=AuntAgony(False).move_to([6,-2.5,0])
+    self.add(AgonyPer)
+    
+    AgoText1=Text('Oh nay, well that clearly did not work \n'
+                  'like I intended, let us try oncemore.',
+                  font_size=30).to_edge(DL)
+    self.add(AgoText1)
+    
+    self.play(Unwrite(AgoText1))
+    
+    AgoText2=Text('Perhaps we could attempt at asking Lord Polonius \n'
+                  'whether he and his comrads could just leave her \n'
+                  'alone for a while.',
+                  font_size=30).to_edge(DL)
+    self.play(Write(AgoText2))
+    
+    OphPer=Ophelia(False).move_to([8,0,0])
+    PolPer=Polonius(True).move_to([-8,0,0])
+    self.add(OphPer, PolPer)
+    
+    MoveTo(PolPer,[-8,0,0],[-2,0,0])
+    MoveTo(OphPer,[8,0,0],[2,0,0])
+    
+    OphText1=Text('Dear father, may I request that you \n'
+                  'will no longer be involved with me and \n'
+                  'the Lord Hamlet?', font_size=30).to_edge(UR)
+    PolText1=Text('By the rood no of course I will not, \n'
+                  'It appears to me that his madness might \n'
+                  'have taken ahold of you aswell!', font_size=30).to_edge(UL)
+    OphText2=Text('Father, do thy take me for a spunge? \n'
+                  'Of course I am not driven mad, I am afraid \n'
+                  'that your chamber of mirrors conceals you \n'
+                  'from any opposing information!', font_size=30).to_edge(UR)
+    PolText2=Text('What do you think of me? Is this how you \n'
+                  'view me? Go to your room and do not return \n'\
+                  'until I have said so!', font_size=30).to_edge(UL)
+    
+    self.play(Write(OphText1))
+    self.wait(3)
+    self.play(Unwrite(OphText1))
+    self.play(Write(PolText1))
+    self.wait(3)
+    self.play(Unwrite(PolText1))
+    self.play(Write(OphText2))
+    self.wait(3)
+    self.play(Unwrite(OphText2))
+    self.play(Write(PolText2))
+    self.wait(3)
+    self.play(Unwrite(PolText2))
+    
+    MoveTo(PolPer,[-2,0,0],[-8,0,0])
+    MoveTo(OphPer,[2,0,0],[8,0,0])
+    
+    self.play(Unwrite(AgoText2))
+    
+    AgoText3=Text('Well that also did not go like I wished \n'
+                  'it would go. Let\'s attempt one final time', font_size=30).to_edge(DL)
+    
+    self.play(Write(AgoText3))
+    self.wait(3)
+    self.play(Unwrite(AgoText3))
+    
+    self.wait(3)
+
+class Scene3(Scene):
+  def construct(self):
+    def MoveTo(Mobject,OldPos,NewPos):
+      self.play(Mobject.animate.shift(RIGHT*(NewPos[0]-OldPos[0])))
+      self.play(Mobject.animate.shift(UP*(NewPos[1]-OldPos[1])))
+      
+      return Mobject
+    
+    AgonyPer=AuntAgony(False).move_to([6,-2.5,0])
+    self.add(AgonyPer)
+    
+    self.wait(3)
+    
+    AgoText2=Text('Maybe we should just stop talking \n'
+                  'to him, Ophelia..',
+                  font_size=30).to_edge(DL)
+    self.play(Write(AgoText2))
+    
+    OphPer=Ophelia(True).move_to([-8,0,0])
+    self.add(OphPer)
+    
+    MoveTo(OphPer,[-8,0,0],[-2,0,0])
+    
+    OphText1=Text('It sure is a pity, however, \n'
+                  'if there really are no other options, \n'
+                  'I am forced to comply.', font_size=30).to_edge(UR)
+    
+    AgoText3=Text('I am sorry I could do nothing to help you, \n'
+                  'but we do not have a choice.', font_size=30).to_edge(DL)
+    
+    OphText2=Text('It is alright, I have already started \n'
+                  'to get used to it. Goodbye Misses Agony.', font_size=30).to_edge(UR)
+    
+    AgoText4=Text('Goodbye, Ophelia, \n', font_size=30).to_edge(DL)
+    
+    AgoText5=Text('This story doesn\'t realy end well, \n'
+                  'however I am sure it won\'t get worse than this.', font_size=30).to_edge(DL)
+    AgoText6=Text('And also, it was quite common for shakespear\'s \n'
+                  'to break the fourth wall, so goodbye, dear audience.', font_size=30).to_edge(DL)
+    
+    self.play(Unwrite(AgoText2))
+    self.play(Write(OphText1))
+    self.wait(3)
+    self.play(Unwrite(OphText1))
+    self.play(Write(AgoText3))
+    self.wait(3)
+    self.play(Unwrite(AgoText3))
+    self.play(Write(OphText2))
+    self.wait(3)
+    self.play(Unwrite(OphText2))
+    MoveTo(OphPer,[-2,0,0],[-8,0,0])
+    self.play(Write(AgoText4))
+    self.wait(3)
+    self.play(Unwrite(AgoText4))
+    self.play(Write(AgoText5))
+    self.wait(3)
+    self.play(Unwrite(AgoText5))
+    self.play(Write(AgoText6))
+    self.wait(3)
+    self.play(Unwrite(AgoText6))
+    MoveTo(AgonyPer,[6.-2.5,0],[8,0,0])
+    self.play(FadeOut(OphPer),FadeOut(AgonyPer))
+    
+    Outrotext1=Text('This video was made by Derek Verduijn \n', font_size=50)
+    self.play(FadeIn(Outrotext1))
+    self.play(FadeIn(Text('using the Manim Python Library, edited with KDENLive.', font_size=30).next_to(Outrotext1,DOWN)))
+    self.wait(3)
